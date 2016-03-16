@@ -24,7 +24,6 @@ test(`Show read time for articles to user`, (assert) => {
 test(`Show navigation to the user`, (assert) => {
   const nav = document.querySelector(`nav`);
   const navItems = document.querySelectorAll(`nav a`);
-  debugger;
 
   assert.notStrictEqual(nav, null,
     `There should be a "nav" element`);

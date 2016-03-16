@@ -4,3 +4,95 @@
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
 @import 'box-sizing';
+
+$brand-blue: #233139;
+$brand-other-blue: #30373d;
+$brand-highlight: #5dafab;
+$brand-white: #fff;
+$brand-gray: #606669;
+$gutter: 2rem;
+$sans-serif: 'Open Sans', sans-serif;
+$serif: Georgia, Times, 'Times New Roman', serif;
+
+body {
+  margin: 0 $gutter / 2;
+  background: $brand-blue;
+
+  color: $brand-gray;
+  font-family: $serif;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: $brand-highlight;
+}
+
+.align {
+  &left {
+    margin-right: $gutter;
+
+    float: left;
+  }
+
+  &right {
+    margin-left: $gutter;
+
+    float: right;
+  }
+}
+
+.title {
+  margin: $gutter * 2 0;
+
+  color: $brand-white;
+  text-align: center;
+}
+
+.entry {
+  max-width: 60rem;
+  margin: auto;
+  padding: $gutter * 2 $gutter * 4;
+
+  background: $brand-white;
+
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+
+  & + .entry {
+    margin-top: $gutter;
+  }
+
+  &__title {
+    color: $brand-other-blue;
+    font-family: $sans-serif;
+
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  &__info {
+    font-family: $sans-serif;
+    font-size: 1rem;
+
+    list-style: none;
+    text-align: center;
+  }
+
+  &__info-item {
+    display: inline-block;
+
+    color: $brand-highlight;
+  }
+
+  &__info-item + &__info-item {
+    &::before {
+      margin: 0 0.4rem;
+
+      content: '\00b7';
+    }
+  }
+}
